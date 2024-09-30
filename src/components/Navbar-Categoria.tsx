@@ -2,7 +2,13 @@ import { useState } from "react";
 import logo from "./img/lg-bl.png";
 import logo2 from "./img/lg-ng.png";
 
-export default function NavbarCategoria() {
+interface NavbarCategoriaProps {
+  onCategoriaClick: (categoria: string) => void;
+}
+
+export default function NavbarCategoria({
+  onCategoriaClick,
+}: NavbarCategoriaProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -28,7 +34,7 @@ export default function NavbarCategoria() {
               alt="Artesania-Cascajal-Bolivar"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Categorias
+              Categorías
             </span>
           </a>
           <button
@@ -61,37 +67,36 @@ export default function NavbarCategoria() {
           >
             <ul className="flex flex-col mt-4 font-medium rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
-                  className="block px-3 py-2 text-white bg-blue-700 rounded dark:bg-blue-600"
-                  aria-current="page"
+                <button
+                  onClick={() => onCategoriaClick("vinagres")}
+                  className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
-                  Vinagres Artezanales
-                </a>
+                  Vinagres Artesanales
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  onClick={() => onCategoriaClick("granos")}
                   className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   Granos y Legumbres
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  onClick={() => onCategoriaClick("aceites")}
                   className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   Aceites del Campo
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <button
+                  onClick={() => onCategoriaClick("accesorios")}
                   className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
-                  Accesorios Artezanales
-                </a>
+                  Accesorios Artesanales
+                </button>
               </li>
             </ul>
           </div>

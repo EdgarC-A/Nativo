@@ -1,14 +1,14 @@
 import { cn } from "../../../utils/cn";
 import ButtonBuy from "../button/ButtonBuy";
 
-export function Card3() {
+export function Card5() {
   return (
     <section className="flex flex-col justify-around mt-20 md:flex-col lg:flex-row ">
       <div className="flex-none group/card md:mt-10">
         <div
           className={cn(
             " bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-            "bg-[url(https://ideogram.ai/assets/image/lossless/response/FdgngHmJReO0HzivkTWtsA)] bg-cover"
+            "bg-[url(https://ideogram.ai/assets/image/lossless/response/fQWC32C8QVCcGV6peilEjw)] bg-cover"
           )}
         >
           <div className="absolute top-0 left-0 w-full h-full transition duration-300 group-hover/card:bg-black opacity-60"></div>
@@ -29,7 +29,7 @@ export function Card3() {
           </div>
           <div className="text content">
             <h1 className="relative z-10 text-xl font-bold md:text-2xl text-gray-50">
-              Vinagre Original
+              Aceite de Achote
             </h1>
             <p className="relative z-10 my-4 text-sm font-normal text-gray-50">
               Para un dia soleado, echo a mano de los mejores artezanos de
@@ -45,7 +45,7 @@ export function Card3() {
         <div
           className={cn(
             " bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-            "bg-[url(https://ideogram.ai/assets/image/lossless/response/2ABJHrooREKWzacgKASB0Q)] bg-cover"
+            "bg-[url(https://ideogram.ai/assets/image/lossless/response/Hr_TC2GBTb-YHFq40nUXlQ)] bg-cover"
           )}
         >
           <div className="absolute top-0 left-0 w-full h-full transition duration-300 group-hover/card:bg-black opacity-60"></div>
@@ -66,7 +66,7 @@ export function Card3() {
           </div>
           <div className="text content">
             <h1 className="relative z-10 text-xl font-bold md:text-2xl text-gray-50">
-              Vinagre Fermentado
+              Aceite Original
             </h1>
             <p className="relative z-10 my-4 text-sm font-normal text-gray-50">
               Para un dia soleado, echo a mano de los mejores artezanos de
@@ -82,7 +82,7 @@ export function Card3() {
         <div
           className={cn(
             " bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-            "bg-[url(https://ideogram.ai/assets/image/lossless/response/V8etGLEnQQWuLuAI-LNdzg)] bg-cover"
+            "bg-[url(https://ideogram.ai/assets/image/lossless/response/HExftPYiSPmIKKDMqxBX1g)] bg-cover"
           )}
         >
           <div className="absolute top-0 left-0 w-full h-full transition duration-300 group-hover/card:bg-black opacity-60"></div>
@@ -103,7 +103,7 @@ export function Card3() {
           </div>
           <div className="text content">
             <h1 className="relative z-10 text-xl font-bold md:text-2xl text-gray-50">
-              Vinagre Picante
+              Aceite Mixto
             </h1>
             <p className="relative z-10 my-4 text-sm font-normal text-gray-50">
               Para un dia soleado, echo a mano de los mejores artezanos de
