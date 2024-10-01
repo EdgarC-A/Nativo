@@ -22,7 +22,7 @@ const CartComponent = () => {
       <div>
         <Navbar />
       </div>
-      <div className="p-100">
+      <div className="relative p-100 top-10">
         {cartItems.length === 0 ? (
           <p>No hay artículos en el carrito.</p>
         ) : (

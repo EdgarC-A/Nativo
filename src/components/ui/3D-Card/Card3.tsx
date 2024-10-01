@@ -1,8 +1,10 @@
 import { cn } from "../../../utils/cn";
-import ButtonBuy from "../button/ButtonBuy";
+// import ButtonBuy from "../button/ButtonBuy";
 import ButtonAddToCart from "../../ButtonBuy";
 import { useContext } from "react";
 import { CartContext } from "../../contexbuy/CartContext";
+import { AnimatedModalDemo } from "../../AnimatedModalDemo";
+import CustomCartButton from "../../CustomCartButton";
 
 // Define la interfaz para el producto
 interface Product {
@@ -32,7 +34,7 @@ export function Card3() {
   return (
     <section className="flex flex-col justify-around mt-20 md:flex-col lg:flex-row">
       {/* Vinagre Original */}
-      <div className="flex-none group/card md:mt-10">
+      <div className="flex-1 mt-10 group/card md:mt-10">
         <div
           className={cn(
             "bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
@@ -57,27 +59,30 @@ export function Card3() {
               Bolívar.
             </p>
             <div className="z-20">
-              <ButtonBuy />
+              {/* <ButtonBuy /> */}
+              <div className="relative">
+                <ButtonAddToCart
+                  onClick={() =>
+                    handleAddToCart({
+                      id: 1,
+                      name: "Vinagre Original",
+                      price: 10000,
+                      quantity: 1,
+                      description: "Vinagre artesanal de alta calidad",
+                    })
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <ButtonAddToCart
-            onClick={() =>
-              handleAddToCart({
-                id: 1,
-                name: "Vinagre Original",
-                price: 10000,
-                quantity: 1,
-                description: "Vinagre artesanal de alta calidad",
-              })
-            }
-          />
+          <AnimatedModalDemo />
         </div>
       </div>
 
       {/* Vinagre Picante */}
-      <div className="flex-none group/card md:mt-10">
+      <div className="flex-1 mt-10 group/card md:mt-10">
         <div
           className={cn(
             "bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
@@ -101,27 +106,30 @@ export function Card3() {
               Un toque picante para tus comidas.
             </p>
             <div className="z-20">
-              <ButtonBuy />
+              {/* <ButtonBuy /> */}
+              <div className="relative">
+                <ButtonAddToCart
+                  onClick={() =>
+                    handleAddToCart({
+                      id: 2,
+                      name: "Vinagre Picante",
+                      price: 12000,
+                      quantity: 1,
+                      description: "Un toque picante para tus comidas.",
+                    })
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <ButtonAddToCart
-            onClick={() =>
-              handleAddToCart({
-                id: 2,
-                name: "Vinagre Picante",
-                price: 12000,
-                quantity: 1,
-                description: "Un toque picante para tus comidas.",
-              })
-            }
-          />
+          <AnimatedModalDemo />
         </div>
       </div>
 
       {/* Vinagre Mixto */}
-      <div className="flex-none group/card md:mt-10">
+      <div className="flex-1 mt-10 group/card md:mt-10">
         <div
           className={cn(
             "bg-center cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
@@ -146,22 +154,25 @@ export function Card3() {
               Bolívar.
             </p>
             <div className="z-20">
-              <ButtonBuy />
+              {/* <ButtonBuy /> */}
+              <div className="relative">
+                <ButtonAddToCart
+                  onClick={() =>
+                    handleAddToCart({
+                      id: 3,
+                      name: "Vinagre Mixto",
+                      price: 10000,
+                      quantity: 1,
+                      description: "Vinagre mixto de alta calidad.",
+                    })
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <ButtonAddToCart
-            onClick={() =>
-              handleAddToCart({
-                id: 3,
-                name: "Vinagre Mixto",
-                price: 10000,
-                quantity: 1,
-                description: "Vinagre mixto de alta calidad.",
-              })
-            }
-          />
+          <AnimatedModalDemo />
         </div>
       </div>
     </section>

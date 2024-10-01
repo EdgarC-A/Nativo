@@ -1,17 +1,24 @@
 import React from "react";
 
 type ButtonAddToCartProps = {
-  onClick: () => void; // función que se ejecutará al hacer clic en el botón
+  onClick: () => void;
 };
 
 const ButtonAddToCart: React.FC<ButtonAddToCartProps> = ({ onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      className="px-4 py-2 mt-4 text-white transition-all bg-blue-500 rounded-md hover:bg-blue-600"
-    >
-      Agregar al Carrito
-    </button>
+    <div className="text-center rounded-md bg-white/70">
+      <button
+        onClick={onClick}
+        className="px-4 py-2 mt-4 text-white transition-all rounded-md hover:bg-white"
+      >
+        <img
+          width="35"
+          height="35"
+          src="https://img.icons8.com/ios-filled/100/add-shopping-cart.png"
+          alt="add-shopping-cart"
+        />
+      </button>
+    </div>
   );
 };
 

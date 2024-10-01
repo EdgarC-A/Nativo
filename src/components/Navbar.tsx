@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "./img/lg-ng.png";
 import logo2 from "./img/lg-bl.png";
 import ThemeToggleButton from "./ThemeToggleButton";
+import CustomCartButton from "./CustomCartButton";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,9 +30,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <nav
-        className={`fixed left-0 right-0 z-20 transition-colors duration-300 ${bgColor} dark:bg-customDarkBlue`}
+        className={` fixed left-0 right-0 z-20 transition-colors duration-300 ${bgColor} dark:bg-customDarkBlue`}
       >
         <div className="px-2 max-w-7xl sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
@@ -118,12 +119,13 @@ export default function Navbar() {
                   >
                     Contacto
                   </NavLink>
-                  <NavLink
-                    to="/Cart" // Enlace al carrito
-                    className="px-3 py-2 text-sm font-medium text-black transition duration-200 ease-linear rounded-md hover:bg-gray-700 hover:text-white dark:text-white"
-                  >
-                    Carrito
-                  </NavLink>
+                  <div>
+                    <CustomCartButton />
+                    <NavLink
+                      to="/Cart" // Enlace al carrito
+                      className="block text-sm font-medium text-black transition duration-200 ease-linear rounded-md hover:bg-gray-700 hover:text-white dark:text-white"
+                    ></NavLink>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,7 +136,7 @@ export default function Navbar() {
           className={`${isMenuOpen ? "block" : "hidden"} sm:hidden`}
           id="mobile-menu"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/75">
             <NavLink
               to="/InicioPage"
               className="block px-3 py-2 text-base font-medium text-black rounded-md dark:text-white"
@@ -159,12 +161,13 @@ export default function Navbar() {
             >
               Contacto
             </NavLink>
-            <NavLink
-              to="/Cart" // Enlace al carrito en la vista móvil
-              className="block px-3 py-2 text-base font-medium text-black rounded-md dark:text-white hover:bg-gray-700 hover:text-white"
-            >
-              Carrito
-            </NavLink>
+            <div>
+              <CustomCartButton />
+              <NavLink
+                to="/Cart" // Enlace al carrito
+                className="block text-sm font-medium text-black transition duration-200 ease-linear rounded-md hover:bg-gray-700 hover:text-white dark:text-white"
+              ></NavLink>
+            </div>
           </div>
         </div>
       </nav>

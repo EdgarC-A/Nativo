@@ -40,6 +40,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       }
     });
   };
+  const getTotalItems = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
 
   // Implementación de la función removeFromCart
   const removeFromCart = (id: number) => {

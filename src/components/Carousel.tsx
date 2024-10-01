@@ -49,7 +49,7 @@ export function CarouselDefault() {
   };
 
   return (
-    <div className="w-full mx-auto ">
+    <div className="z-10 w-full mx-auto ">
       <div className="relative overflow-hidden rounded-lg shadow-lg ">
         <div className="relative h-80 md:h-[42rem]">
           {slides.map((slide, index) => (
@@ -102,7 +102,7 @@ export function CarouselDefault() {
         {/* Botón anterior */}
         <button
           onClick={handlePrev}
-          className="absolute z-40 flex items-center justify-center w-10 h-10 transition rounded-full top-1/2 left-3 bg-gray-200/50 hover:bg-gray-300 focus:outline-none"
+          className="absolute z-10 flex items-center justify-center w-10 h-10 transition rounded-full top-1/2 left-3 bg-gray-200/50 hover:bg-gray-300 focus:outline-none"
         >
           <svg
             className="w-5 h-5 text-gray-600"
@@ -123,7 +123,7 @@ export function CarouselDefault() {
         {/* Botón siguiente */}
         <button
           onClick={handleNext}
-          className="absolute z-40 flex items-center justify-center w-10 h-10 transition rounded-full top-1/2 right-3 bg-gray-200/50 hover:bg-gray-300 focus:outline-none"
+          className="absolute z-10 flex items-center justify-center w-10 h-10 transition rounded-full top-1/2 right-3 bg-gray-200/50 hover:bg-gray-300 focus:outline-none"
         >
           <svg
             className="w-5 h-5 text-gray-600"
