@@ -12,7 +12,7 @@ type CartItem = {
 type CartContextType = {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
-  removeFromCart: (id: number) => void; // Asegúrate de que esto esté aquí
+  removeFromCart: (id: number) => void;
 };
 
 export const CartContext = createContext<CartContextType | undefined>(

@@ -4,7 +4,6 @@ import ButtonAddToCart from "../../ButtonBuy";
 import { useContext } from "react";
 import { CartContext } from "../../contexbuy/CartContext";
 import { AnimatedModalDemo } from "../../AnimatedModalDemo";
-import CustomCartButton from "../../CustomCartButton";
 
 // Define la interfaz para el producto
 interface Product {
